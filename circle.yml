@@ -1,5 +1,1 @@
-test:
 
- override:
-
-   - ./node_modules/.bin/gulp ci
