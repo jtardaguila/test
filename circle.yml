@@ -1,24 +1,7 @@
-machine:
-  pre:
-    # Create ramdisk
-    - mkdir ramdisk
-    - sudo mount -o size=5G -t tmpfs none /home/ubuntu/ramdisk
-    - sudo chown ubuntu:ubuntu ramdisk
-    # Delete /var/lib/docker for demo purpose
-    - sudo rm -rf /var/lib/docker
-    # Install docker and use ramdisk
-    - sudo curl -L -o /usr/bin/docker 'http://s3-external-1.amazonaws.com/circle-downloads/docker-1.8.1-circleci'
-    - sudo sed -i -e 's|DOCKER_OPTS="-s btrfs -e lxc"|DOCKER_OPTS="-e lxc -g /home/ubuntu/ramdisk"|' /etc/default/docker
-    - sudo chmod 0755 /usr/bin/docker
-    - sudo service docker start
-
 dependencies:
   override:
-    # Laoding saved image
-    - curl -o ubuntu.tar.gz https://s3-ap-northeast-1.amazonaws.com/z1yo2s66zq/ubuntu.tar.gz
-    - tar zxvf ubuntu.tar.gz
+    - exit 0
 
 test:
   override:
-    - docker load -i ubuntu.tar
-    - docker run ubuntu uptime
+    - exit 0
