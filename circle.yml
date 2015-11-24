@@ -34,8 +34,3 @@ checkout:
     - "custom_1"   # relative to the build directory
     - "~/custom_2" # relative to the user's home directory
 
-test:
-  override:
-    - mkdir -p $CIRCLE_TEST_REPORTS/cucumber
-    - bundle exec cucumber --format json --out $CIRCLE_TEST_REPORTS/cucumber/tests.cucumber
-
