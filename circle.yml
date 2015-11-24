@@ -8,5 +8,5 @@ test:
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
     - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
-serenity.test.root=uk.co.jemos.podam.test.unit.features
-serenity.requirement.types=epics,stories
+serenity.test.root=uk.co.jemos.podam.test.unit.features;
+serenity.requirement.types=epics,stories;
