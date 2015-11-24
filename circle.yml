@@ -1,5 +1,6 @@
-
-jdk:
+machine:
+  java:
+  version: openjdk7
   - oraclejdk8
   - oraclejdk7
   - openjdk6
