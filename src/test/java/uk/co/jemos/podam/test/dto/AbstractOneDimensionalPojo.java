@@ -6,6 +6,11 @@ package uk.co.jemos.podam.test.dto;
 import java.util.Calendar;
 
 import uk.co.jemos.podam.common.PodamIntValue;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * Abstract POJO to test inheritance.
